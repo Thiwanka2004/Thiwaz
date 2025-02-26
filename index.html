@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chethana Thiwanka | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6D28D9; /* Vibrant Purple */
+            --secondary: #059669; /* Emerald Green */
+            --accent: #DB2777; /* Pink */
+            --background: #F9FAFB; /* Light Gray */
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .dark-mode {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .dark-mode .bg-white {
+            background-color: #2d2d2d !important;
+            color: #ffffff !important;
+        }
+
+        .dark-mode .text-gray-700 {
+            color: #d1d5db !important;
+        }
+
+        .dark-mode .bg-purple-50 {
+            background-color: #3e3e3e !important;
+        }
+
+        .dark-mode .bg-pink-50 {
+            background-color: #3e3e3e !important;
+        }
+
+        .dark-mode .bg-green-50 {
+            background-color: #3e3e3e !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Loading Animation -->
+    <div id="loading" class="fixed inset-0 bg-white flex items-center justify-center z-50">
+        <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-purple-600"></div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-purple-600" style="width: 0%;"></div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" class="fixed top-4 right-4 p-2 bg-purple-600 text-white rounded-full shadow-lg hover:bg-purple-700 transition-all">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <video autoplay muted loop class="absolute z-0 w-auto min-w-full min-h-full max-w-none">
+            <source src="your-bg-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="relative z-10 text-center text-white">
+            <img src="img-p.jpg" alt="Profile" class="w-48 h-48.5 rounded-full mx-auto border-4 border-white floating">
+            <h1 class="text-5xl font-bold mt-6 mb-4">Chethana Thiwanka</h1>
+            <p class="text-xl">Mathematics Enthusiast | Creative Designer</p>
+            <div class="mt-8">
+                <a href="#about" class="px-6 py-3 bg-white text-indigo-900 rounded-full font-bold hover:bg-indigo-100 transition-all">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 px-8 bg-white" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <!-- Photo Box -->
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-72 h-72 rounded-lg overflow-hidden shadow-xl card-hover">
+                        <img src="img-1.jpg" alt="Chethana Thiwanka" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                            <p class="text-white text-lg font-semibold"> </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Information -->
+                <div class="md:w-1/2">
+                    <p class="text-lg text-gray-700 mb-6">
+                        I am Chethana Thiwanka Disanayaka, a passionate individual with a strong background in Combined Mathematics and ICT. I enjoy exploring creative fields like graphic design, photography, and videography. I am always eager to learn and contribute to meaningful projects.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-calendar-alt text-2xl text-purple-500 w-12"></i>
+                            <p class="text-gray-700"><strong>Date of Birth:</strong> 27th October 2004</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-id-card text-2xl text-pink-500 w-12"></i>
+                            <p class="text-gray-700"><strong>NIC No:</strong> 200430103039</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-venus-mars text-2xl text-green-500 w-12"></i>
+                            <p class="text-gray-700"><strong>Gender:</strong> Male</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-flag text-2xl text-purple-500 w-12"></i>
+                            <p class="text-gray-700"><strong>Nationality:</strong> Sri Lankan</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-praying-hands text-2xl text-pink-500 w-12"></i>
+                            <p class="text-gray-700"><strong>Religion:</strong> Buddhist</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-heart text-2xl text-green-500 w-12"></i>
+                            <p class="text-gray-700"><strong>Civil Status:</strong> Unmarried</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-2xl text-purple-500 w-12"></i>
+                            <p class="text-gray-700"><strong>District:</strong> Anuradhapura</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-20 px-8 bg-gradient-to-r from-purple-50 to-green-50" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Education</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- O/L -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <h3 class="text-2xl font-bold mb-4 text-purple-600">G.C.E O/L - 2020</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Maths - A</li>
+                        <li>Buddhism - A</li>
+                        <li>History - A</li>
+                        <li>Sinhala Literature - A</li>
+                        <li>ICT - B</li>
+                        <li>Science - C</li>
+                        <li>Commerce - C</li>
+                        <li>Sinhala - C</li>
+                        <li>English - S</li>
+                    </ul>
+                </div>
+                <!-- A/L -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <h3 class="text-2xl font-bold mb-4 text-green-600">G.C.E A/L - 2023</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Combined Mathematics - S</li>
+                        <li>Physics - S</li>
+                        <li>Information Technology - C</li>
+                        <li>English - S</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20 px-8 bg-white" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 bg-purple-50 rounded-2xl text-center card-hover">
+                    <i class="fas fa-laptop-code text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">ICT Knowledge</h3>
+                    <p class="text-gray-700">Proficient in software and hardware troubleshooting.</p>
+                </div>
+                <div class="p-8 bg-pink-50 rounded-2xl text-center card-hover">
+                    <i class="fas fa-palette text-4xl text-pink-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Graphic Design</h3>
+                    <p class="text-gray-700">Expert in Photoshop, Illustrator, and CorelDraw.</p>
+                </div>
+                <div class="p-8 bg-green-50 rounded-2xl text-center card-hover">
+                    <i class="fas fa-video text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Video Editing</h3>
+                    <p class="text-gray-700">Skilled in Premiere Pro and CapCut.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Editing Section -->
+    <section class="py-20 px-8 bg-white" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Recent Editing</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Video Editing Project -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                    <video controls class="w-full h-48 object-cover rounded-lg mb-4">
+                        <source src="vid-r1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3 class="text-xl font-bold mb-2">Video Editing</h3>
+                    <p class="text-gray-700">A recent video editing project showcasing my skills.</p>
+                </div>
+                <!-- Graphic Design Project -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                    <img src="img-r2.jpg" alt="Graphic Design" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Graphic Design</h3>
+                    <p class="text-gray-700">A creative graphic design project for a client.</p>
+                </div>
+                <!-- Thumbnail Design Project -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                    <img src="img-r3.jpg" alt="Thumbnail Design" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Thumbnail Design</h3>
+                    <p class="text-gray-700">A YouTube thumbnail design for a popular channel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="py-20 px-8 bg-white" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Portfolio</h2>
+            <p class="text-center text-gray-700 mb-8">Click on the categories below to explore my work on Google Drive!</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Video Editing -->
+                <a href="https://drive.google.com/drive/folders/1TdMf5czxjziySrdQQnwD9zYa7U6K-3Ky?usp=drive_link" target="_blank" class="p-8 bg-purple-50 rounded-2xl text-center card-hover transition-all hover:bg-purple-100">
+                    <i class="fas fa-video text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Video Editing</h3>
+                    <p class="text-gray-700">Click here to view my video editing projects.</p>
+                </a>
+
+                <!-- Animated Posts -->
+                <a href="https://drive.google.com/drive/folders/1TdMf5czxjziySrdQQnwD9zYa7U6K-3Ky?usp=drive_link" target="_blank" class="p-8 bg-pink-50 rounded-2xl text-center card-hover transition-all hover:bg-pink-100">
+                    <i class="fas fa-film text-4xl text-pink-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Animated Posts</h3>
+                    <p class="text-gray-700">Click here to view my animated social media posts.</p>
+                </a>
+
+                <!-- Logos -->
+                <a href="https://drive.google.com/drive/folders/1TdMf5czxjziySrdQQnwD9zYa7U6K-3Ky?usp=drive_link" target="_blank" class="p-8 bg-green-50 rounded-2xl text-center card-hover transition-all hover:bg-green-100">
+                    <i class="fas fa-pen-nib text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Logos</h3>
+                    <p class="text-gray-700">Click here to view my logo design portfolio.</p>
+                </a>
+
+                <!-- Posts -->
+                <a href="https://drive.google.com/drive/folders/1TdMf5czxjziySrdQQnwD9zYa7U6K-3Ky?usp=drive_link" target="_blank" class="p-8 bg-purple-50 rounded-2xl text-center card-hover transition-all hover:bg-purple-100">
+                    <i class="fas fa-image text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Posts</h3>
+                    <p class="text-gray-700">Click here to browse my social media post designs.</p>
+                </a>
+
+                <!-- T-Shirt Designs -->
+                <a href="https://drive.google.com/drive/folders/1TdMf5czxjziySrdQQnwD9zYa7U6K-3Ky?usp=drive_link" target="_blank" class="p-8 bg-pink-50 rounded-2xl text-center card-hover transition-all hover:bg-pink-100">
+                    <i class="fas fa-tshirt text-4xl text-pink-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">T-Shirt Designs</h3>
+                    <p class="text-gray-700">Click here to see my creative T-shirt designs.</p>
+                </a>
+
+                <!-- Thumbnails -->
+                <a href="https://drive.google.com/drive/folders/1TdMf5czxjziySrdQQnwD9zYa7U6K-3Ky?usp=drive_link" target="_blank" class="p-8 bg-green-50 rounded-2xl text-center card-hover transition-all hover:bg-green-100">
+                    <i class="fas fa-icons text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Thumbnails</h3>
+                    <p class="text-gray-700">Click here to explore my YouTube thumbnail designs.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-8 bg-gradient-to-r from-purple-50 to-green-50" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Testimonials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <p class="text-gray-700 mb-4">"Chethana is an incredibly talented designer. His attention to detail and creativity are unmatched!"</p>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="Client" class="w-10 h-10 rounded-full mr-4">
+                        <div>
+                            <p class="font-bold">Mr.Theekshana</p>
+                            <p class="text-sm text-gray-600"> </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <p class="text-gray-700 mb-4">"Working with Chethana was a pleasure. He delivered high-quality work on time and exceeded expectations."</p>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="Client" class="w-10 h-10 rounded-full mr-4">
+                        <div>
+                            <p class="font-bold">Mr.Bandara</p>
+                            <p class="text-sm text-gray-600"> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="py-20 px-8 bg-gradient-to-r from-purple-600 to-indigo-600 text-white" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Let's Work Together!</h2>
+            <p class="text-lg mb-8">I'm always open to new opportunities and collaborations. Let's create something amazing!</p>
+            <a href="#contact" class="px-8 py-3 bg-white text-purple-900 rounded-full font-bold hover:bg-purple-100 transition-all">
+                Contact Me
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-8 bg-purple-900 text-white" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-8">Contact Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone-alt text-2xl w-12"></i>
+                        <p>078 9831223</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-2xl w-12"></i>
+                        <p>chethanathiwanka05@gmail.com</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-2xl w-12"></i>
+                        <p>No. 65A, track 01, left bank, Mahakanadharawa, Mininthale.</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-share-alt text-2xl w-12"></i>
+                        <p>Connect with me:</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=100081256209509&mibextid=ZbWKwL" target="_blank" class="text-2xl hover:text-purple-400 transition-all"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/chethana_thiwanka_?igsh=MzNlNGNkZWQ4Mg==" target="_blank" class="text-2xl hover:text-purple-400 transition-all"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/ChethanaTiwanka?t=Jm2KdMO8rykRRCf63juU6Q&s=09" target="_blank" class="text-2xl hover:text-purple-400 transition-all"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/qr/SCAYMG72GAM5L1" target="_blank" class="text-2xl hover:text-purple-400 transition-all"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/Chethanathiwanka" target="_blank" class="text-2xl hover:text-purple-400 transition-all"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+                    <input type="text" name="name" placeholder="Name" class="w-full p-3 rounded-lg bg-purple-800" required>
+                    <input type="email" name="email" placeholder="Email" class="w-full p-3 rounded-lg bg-purple-800" required>
+                    <textarea name="message" rows="4" placeholder="Message" class="w-full p-3 rounded-lg bg-purple-800" required></textarea>
+                    <button type="submit" class="px-8 py-3 bg-white text-purple-900 rounded-full font-bold hover:bg-purple-100 transition-all">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://www.facebook.com/profile.php?id=100081256209509&mibextid=ZbWKwL" target="_blank" class="text-2xl hover:text-purple-400 transition-all"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/chethana_thiwanka_?igsh=MzNlNGNkZWQ4Mg==" target="_blank" class="text-2xl hover:text-purple-400 transition-all"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/ChethanaTiwanka?t=Jm2KdMO8rykRRCf63juU6Q&s=09" target="_blank" class="text-2xl hover:text-purple-400 transition-all"><i class="fab fa-twitter"></i></a>
+                <a href="https://wa.me/qr/SCAYMG72GAM5L1" target="_blank" class="text-2xl hover:text-purple-400 transition-all"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://t.me/Chethanathiwanka" target="_blank" class="text-2xl hover:text-purple-400 transition-all"><i class="fab fa-telegram"></i></a>
+            </div>
+            <p>&copy; 2023 Chethana Thiwanka. All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- Scroll-to-Top Button -->
+    <button id="scroll-to-top" class="fixed bottom-4 right-4 p-3 bg-purple-600 text-white rounded-full shadow-lg hover:bg-purple-700 transition-all hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- AOS Initialization -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+
+        // Loading Animation
+        window.addEventListener('load', function() {
+            const loading = document.getElementById('loading');
+            loading.style.display = 'none';
+        });
+
+        // Scroll-to-Top Button
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollToTopButton = document.getElementById('scroll-to-top');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollToTopButton.classList.remove('hidden');
+                } else {
+                    scrollToTopButton.classList.add('hidden');
+                }
+            });
+
+            scrollToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+
+        // Progress Bar
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBar = document.getElementById('progress-bar');
+
+            window.addEventListener('scroll', () => {
+                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrolled = (window.scrollY / scrollHeight) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+        });
+
+        // Dark Mode Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
+            const body = document.body;
+
+            darkModeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+            });
+
+            // Check localStorage for dark mode preference
+            if (localStorage.getItem('darkMode') === 'true') {
+                body.classList.add('dark-mode');
+            }
+        });
+    </script>
+</body>
+</html>
